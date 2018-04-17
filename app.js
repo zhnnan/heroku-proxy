@@ -72,7 +72,7 @@ app.get("/no-js", function(req, res) {
     // grab the "url" parameter from the querystring
     var site = querystring.parse(url.parse(req.url).query).url;
     // and redirect the user to /proxy/url
-    res.redirect(unblockerConfig.prefix + site);
+    res.redirect(unblockerConfig.prefix + 'https://www.google.com/search?q='+site);
 });
 
 // for compatibility with gatlin and other servers, export the app rather than passing it directly to http.createServer
